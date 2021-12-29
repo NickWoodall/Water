@@ -1,0 +1,73 @@
+[ moleculetype ]
+; Iron Ferricyanide [Fe(CN)6] 3-
+; molname   nrexcl -- number of bonds before using non-bonded potential, maybe 3 for torsional or something
+FeC         3
+
+[ atoms ]
+;
+
+;nr  type resnr    residu     atom      cgnr      charge        mass       Position in octahdral arrangement 
+   1 Fe      1       FeC       Fe1          1      -0.834    55.8400    ;     0,0,0
+   2  C      1       FeC        C1          2       0.403    12.01000   ;    0,0,-1
+   3  N      1       FeC        N1          3      -0.763    14.0067    ;    0,0,-2
+   4  C      1       FeC        C2          4       0.403    12.01000   ;    1,0,0
+   5  N      1       FeC        N2          5      -0.763    14.0067    ;    2,0,0
+   6  C      1       FeC        C3          6       0.403    12.01000   ;    0,1,0
+   7  N      1       FeC        N3          7      -0.763    14.0067    ;    0,2,0
+   8  C      1       FeC        C4          8       0.403    12.01000   ;    -1,0,0
+   9  N      1       FeC        N4          9      -0.763    14.0067    ;    -2,0,0
+  10  C      1       FeC        C5         10       0.403    12.01000   ;     0,-1,0
+  11  N      1       FeC        N5         11      -0.763    14.0067    ;     0,-2,0
+  12  C      1       FeC        C6         12       0.403    12.01000   ;     0,0,1
+  13  N      1       FeC        N6         13      -0.763    14.0067    ;     0,0,2
+
+[bond]
+                          
+;  ai    aj funct           r0(nm)          ks(kj/(mol*nm^2)
+    1     2   6            0.1997         64950.0;convert r0 to Ang to nm(div by 10) to nm-2 (mult by 100)     
+    1     4   6            0.1997         64950.0; Fe to C Bond
+    1     6   6            0.1997         64950.0
+    1     8   6            0.1997         64950.0
+    1    10   6            0.1997         64950.0
+    1    12   6            0.1997         64950.0
+    2     3   6            0.1176       1076400.0; C to N Bond
+    4     5   6            0.1176       1076400.0
+    4     5   6            0.1176       1076400.0
+    6     7   6            0.1176       1076400.0
+    8     9   6            0.1176       1076400.0
+   10    11   6            0.1176       1076400.0
+   12    13   6            0.1176       1076500.0
+    
+[angles]
+; ai     aj   ak    funct    simga0(ang)    Kb kJ/(mol rad^2)
+    1    2    3       1         180.0           172.9            ; no conversion, Fe-C-N
+    1    4    5       1         180.0           172.9
+    1    6    7       1         180.0           172.9
+    1    8    9       1         180.0           172.9
+    1   10   11       1         180.0           172.9
+    1   12   13       1         180.0           172.9
+    2    1   12       1         180.0           818.9            ; C-Fe-C
+    4    1    8       1         180.0           818.9
+    6    1   10       1         180.0           818.9
+    2    1    4       1          90.0           818.9            ; C-Fe-C
+    2    1    6       1          90.0           818.9
+    2    1    8       1          90.0           818.9
+    2    1   10       1          90.0           818.9
+    4    1   12       1          90.0           818.9
+    6    1   12       1          90.0           818.9
+    8    1   12       1          90.0           818.9
+   10    1   12       1          90.0           818.9
+          
+
+[ dihedrals ]
+;
+;   ai    aj    ak    al funct  sigma0(ang)  Kd(kJ/(mol*rad^2)   coplanar dihedral == improper
+     2     4     8    12   2       0        354.4   ; C-C-C-C   no conversion
+     2     6    10    12   2       0        354.4  
+     4     6     8    10   2       0        354.4
+     3     5     9    13   2       0        354.4   ; N-N-N-N
+     3     7    11    13   2       0        354.4
+     5     7     9    11   2       0        354.4   
+
+
+
