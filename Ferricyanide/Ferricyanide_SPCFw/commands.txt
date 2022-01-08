@@ -1,0 +1,14 @@
+gmx solvate -cp box_Ferricyanide_coord.gro -cs /usr/local/share/gromacs/top/spc216.gro -p ferricyanide_spcfw.top -box 3.0 3.0 3.0 -o ../add_ions/ferri_water.gro
+
+
+
+
+gmx grompp -f md_ferricyanide.mdp -c ferri_water.gro -p ferricyanide_spcfw.top -o ferri_water_test.tpr -maxwarn 3
+
+gmx genion -s ferri_water_test.tpr -o ferri_K_ions.gro -p ferricyanid.top -pname K -np 3
+
+gmx grompp -f mdout.mdp -c ferri_K_ions.gro -p ferricyanid.top -o em_fk.tpr -maxwarn 3
+
+gmx mdrun -v -deffnm em_fk
+
+gmx grompp -f mdp_ferri_equilibrate.mdp -c em_fk.gro -r em_fk.gro -p ferricyanid.top -o equil.tpr

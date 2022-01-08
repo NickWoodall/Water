@@ -1,0 +1,14 @@
+[ moleculetype ]
+; Water with flexible bond types
+; molname   nrexcl -- number of bonds before using non-bonded potential, maybe 3 for torsional or 
+K         2
+
+[ atoms ]
+;
+
+;nr  type   resnr    residu     atom      cgnr      charge        mass        
+   1  K      1          K         K         1       1.00          39.0983    ; 
+
+
+
+

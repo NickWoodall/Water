@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# md run files
+*.trr
+*.log
+*.edr
+*.cpt
+*.xtc
+
