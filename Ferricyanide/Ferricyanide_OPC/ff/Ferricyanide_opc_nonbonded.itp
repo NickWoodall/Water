@@ -1,0 +1,17 @@
+[ atomtypes ]                            
+;         
+; name      at.num  mass     charge ptype  sigma(nm)    epsilon(kJ/mol)
+C            6      12.01     0.4030  A     0.365        0.71128         ; 
+N            7      14.01    -0.7630  A     0.320        0.6276
+Fe          25      55.00    -0.840   A     0.2594297    0.054392        ;Ang to nm div by 10, kcal/mol to kJ *4.184
+K           19      39.0983   1.0000  A     0.226        0.0302
+OW          16      15.9994   0.00    A     0.316655     0.89036
+HW1          1       1.008    0.6791  A     0.0          0.0
+HW2          1       1.008    0.6791  A     0.0          0.0
+MW           0       0.0     -1.3582  V     0.0          0.0
+
+;parameters in the form of A and B   sigma=(sixth_root(A/B))   epsilon= B^2/4A from K paper
+;  For K A = 522.7, B= 3.89, sigma = 2.26 Ang,  .000723kcal/mnol  
+;4.578
+;2.418
+; modded fec to 0.836 to make neutral, originally 0.834
