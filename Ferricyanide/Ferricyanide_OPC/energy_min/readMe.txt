@@ -1,0 +1,14 @@
+#generate .tpr file to start run, integrator set to equilibration style in .mdp
+
+
+gmx grompp -f energyMin_ferri.mdp -c ferri_K_ions.gro -p ferricyanide_opc.top -o em_ferri.tpr
+
+#the "em_ferri" specifies all input( .tpr) and output files
+
+gmx mdrun -v -deffnm em_ferri
+
+gmx grompp -f energyMin_ferri.mdp -c ferri_K_ions_785.gro -p ferricyanide_opc_785.top -o em_ferri.tpr
+
+#the "em_ferri" specifies all input( .tpr) and output files
+
+gmx mdrun -v -deffnm em_ferri

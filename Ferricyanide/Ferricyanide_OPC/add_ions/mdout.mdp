@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
 ;	On host: DESKTOP-G0MSIU7
-;	At date: Tue Jan 11 21:17:04 2022
+;	At date: Wed Jan 12 21:36:02 2022
 ;
 ;	Created by:
 ;	             :-) GROMACS - gmx grompp, 2020.1-Ubuntu-2020.1-1 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr
 ;	Working dir:  /mnt/c/Users/Crimson_King/Desktop/Water/Ferricyanide/Ferricyanide_OPC/add_ions
 ;	Command line:
-;	  gmx grompp -f md_ferricyanide.mdp -c ferri_water.gro -p ferricyanide_opc.top -o ferri_genion.tpr -maxwarn 3
+;	  gmx grompp -f md_ferricyanide.mdp -c ferri_water_500.gro -p ferricyanide_opc_500.top -o ferri_genion_500.tpr -maxwarn 3
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.

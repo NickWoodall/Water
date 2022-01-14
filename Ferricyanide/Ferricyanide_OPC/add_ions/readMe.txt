@@ -5,3 +5,10 @@ gmx grompp -f md_ferricyanide.mdp -c ferri_water.gro -p ferricyanide_opc.top -o 
 
 gmx genion -s ferri_genion.tpr -o ferri_K_ions.gro -p ferricyanide_opc.top -pname K -np 3
 #Select group 4, SOL to replace with K ions. 
+
+
+
+gmx grompp -f md_ferricyanide.mdp -c ferri_water_785.gro -p ferricyanide_opc_785.top -o ferri_genion_785.tpr -maxwarn 3
+
+gmx genion -s ferri_genion_785.tpr -o ferri_K_ions_785.gro -p ferricyanide_opc_785.top -pname K -np 3
+#Select group 4, SOL to replace with K ions. 
