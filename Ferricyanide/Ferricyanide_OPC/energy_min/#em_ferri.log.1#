@@ -1,0 +1,1283 @@
+              :-) GROMACS - gmx mdrun, 2020.1-Ubuntu-2020.1-1 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.1-Ubuntu-2020.1-1
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /mnt/c/Users/Crimson_King/Desktop/Water/Ferricyanide/Ferricyanide_OPC/energy_min
+Process ID:   239
+Command line:
+  gmx mdrun -v -deffnm em_ferri
+
+GROMACS version:    2020.1-Ubuntu-2020.1-1
+Precision:          single
+Memory model:       64 bit
+MPI library:        thread_mpi
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
+GPU support:        disabled
+SIMD instructions:  SSE2
+FFT library:        fftw-3.3.8-sse2-avx
+RDTSCP usage:       disabled
+TNG support:        enabled
+Hwloc support:      hwloc-2.1.0
+Tracing support:    disabled
+C compiler:         /usr/bin/cc GNU 9.3.0
+C compiler flags:   -msse2 -fexcess-precision=fast -funroll-all-loops
+C++ compiler:       /usr/bin/c++ GNU 9.3.0
+C++ compiler flags: -msse2 -fexcess-precision=fast -funroll-all-loops -fopenmp
+
+
+Running on 1 node with total 8 cores, 16 logical cores
+Hardware detected:
+  CPU info:
+    Vendor: AMD
+    Brand:  AMD Ryzen 7 3700X 8-Core Processor             
+    Family: 23   Model: 113   Stepping: 0
+    Features: aes amd apic avx avx2 clfsh cmov cx8 cx16 f16c fma htt lahf misalignsse mmx msr nonstop_tsc pclmuldq pdpe1gb popcnt pse rdrnd rdtscp sha sse2 sse3 sse4a sse4.1 sse4.2 ssse3
+  Hardware topology: Full
+    Sockets, cores, and logical processors:
+      Socket  0: [   0   1] [   2   3] [   4   5] [   6   7] [   8   9] [  10  11] [  12  13] [  14  15]
+    Numa nodes:
+      Node  0 (53832597504 bytes mem):   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+      Latency:
+               0
+         0  1.00
+    Caches:
+      L1: 32768 bytes, linesize 64 bytes, assoc. 8, shared 2 ways
+      L2: 524288 bytes, linesize 64 bytes, assoc. 8, shared 2 ways
+      L3: 16777216 bytes, linesize 64 bytes, assoc. 16, shared 16 ways
+
+Highest SIMD level requested by all nodes in run: AVX2_256
+SIMD instructions selected at compile time:       SSE2
+This program was compiled for different hardware than you are running on,
+which could influence performance.
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+Input Parameters:
+   integrator                     = steep
+   tinit                          = 0
+   dt                             = 0.001
+   nsteps                         = 10000
+   init-step                      = 0
+   simulation-part                = 1
+   comm-mode                      = Linear
+   nstcomm                        = 100
+   bd-fric                        = 0
+   ld-seed                        = 979993923
+   emtol                          = 500
+   emstep                         = 0.01
+   niter                          = 20
+   fcstep                         = 0
+   nstcgsteep                     = 100
+   nbfgscorr                      = 10
+   rtpi                           = 0.05
+   nstxout                        = 1
+   nstvout                        = 0
+   nstfout                        = 10
+   nstlog                         = 1
+   nstcalcenergy                  = 100
+   nstenergy                      = 10
+   nstxout-compressed             = 0
+   compressed-x-precision         = 1000
+   cutoff-scheme                  = Verlet
+   nstlist                        = 10
+   pbc                            = xyz
+   periodic-molecules             = false
+   verlet-buffer-tolerance        = 0.005
+   rlist                          = 1.05
+   coulombtype                    = PME
+   coulomb-modifier               = Potential-shift
+   rcoulomb-switch                = 0
+   rcoulomb                       = 1
+   epsilon-r                      = 1
+   epsilon-rf                     = inf
+   vdw-type                       = Cut-off
+   vdw-modifier                   = Force-switch
+   rvdw-switch                    = 0.8
+   rvdw                           = 1
+   DispCorr                       = No
+   table-extension                = 1
+   fourierspacing                 = 0.12
+   fourier-nx                     = 25
+   fourier-ny                     = 25
+   fourier-nz                     = 25
+   pme-order                      = 4
+   ewald-rtol                     = 1e-05
+   ewald-rtol-lj                  = 0.001
+   lj-pme-comb-rule               = Geometric
+   ewald-geometry                 = 0
+   epsilon-surface                = 0
+   tcoupl                         = No
+   nsttcouple                     = -1
+   nh-chain-length                = 0
+   print-nose-hoover-chain-variables = false
+   pcoupl                         = No
+   pcoupltype                     = Isotropic
+   nstpcouple                     = -1
+   tau-p                          = 1
+   compressibility (3x3):
+      compressibility[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   ref-p (3x3):
+      ref-p[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   refcoord-scaling               = No
+   posres-com (3):
+      posres-com[0]= 0.00000e+00
+      posres-com[1]= 0.00000e+00
+      posres-com[2]= 0.00000e+00
+   posres-comB (3):
+      posres-comB[0]= 0.00000e+00
+      posres-comB[1]= 0.00000e+00
+      posres-comB[2]= 0.00000e+00
+   QMMM                           = false
+   QMconstraints                  = 0
+   QMMMscheme                     = 0
+   MMChargeScaleFactor            = 1
+qm-opts:
+   ngQM                           = 0
+   constraint-algorithm           = Lincs
+   continuation                   = false
+   Shake-SOR                      = false
+   shake-tol                      = 0.0001
+   lincs-order                    = 4
+   lincs-iter                     = 1
+   lincs-warnangle                = 30
+   nwall                          = 0
+   wall-type                      = 9-3
+   wall-r-linpot                  = -1
+   wall-atomtype[0]               = -1
+   wall-atomtype[1]               = -1
+   wall-density[0]                = 0
+   wall-density[1]                = 0
+   wall-ewald-zfac                = 3
+   pull                           = false
+   awh                            = false
+   rotation                       = false
+   interactiveMD                  = false
+   disre                          = No
+   disre-weighting                = Conservative
+   disre-mixed                    = false
+   dr-fc                          = 1000
+   dr-tau                         = 0
+   nstdisreout                    = 100
+   orire-fc                       = 0
+   orire-tau                      = 0
+   nstorireout                    = 100
+   free-energy                    = no
+   cos-acceleration               = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   simulated-tempering            = false
+   swapcoords                     = no
+   userint1                       = 0
+   userint2                       = 0
+   userint3                       = 0
+   userint4                       = 0
+   userreal1                      = 0
+   userreal2                      = 0
+   userreal3                      = 0
+   userreal4                      = 0
+   applied-forces:
+     electric-field:
+       x:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       y:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       z:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+     density-guided-simulation:
+       active                     = false
+       group                      = protein
+       similarity-measure         = inner-product
+       atom-spreading-weight      = unity
+       force-constant             = 1e+09
+       gaussian-transform-spreading-width = 0.2
+       gaussian-transform-spreading-range-in-multiples-of-width = 4
+       reference-density-filename = reference.mrc
+       nst                        = 1
+       normalize-densities        = true
+       adaptive-force-scaling     = false
+       adaptive-force-scaling-time-constant = 4
+grpopts:
+   nrdf:        4797
+   ref-t:           0
+   tau-t:           0
+annealing:          No
+annealing-npoints:           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp-flags[  0]: 0
+
+
+Using 1 MPI thread
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 16 OpenMP threads 
+
+System total charge: -0.000
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using a Gaussian width (1/beta) of 0.320163 nm for Ewald
+Potential shift: LJ r^-12: -2.720e+00 r^-6: -1.740e+00, Ewald -1.000e-05
+Initialized non-bonded Coulomb Ewald tables, spacing: 9.33e-04 size: 1073
+
+
+Using SIMD 4x4 nonbonded short-range kernels
+
+Using a 4x4 pair-list setup:
+  updated every 10 steps, buffer 0.050 nm, rlist 1.050 nm
+
+Removing pbc first time
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+
+Note that activating steepest-descent energy minimization via the integrator .mdp option and the command gmx mdrun may be available in a different form in a future version of GROMACS, e.g. gmx minimize and an .mdp option.
+Initiating Steepest Descents
+Started Steepest Descents on rank 0 Tue Jan 18 09:02:56 2022
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  5.00000e+02
+   Number of steps    =        10000
+           Step           Time
+              0        0.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    1.37390e+00    0.00000e+00    6.99557e+03    6.52004e+06   -7.39264e+03
+   Coul. recip.      Potential Pressure (bar)
+    5.05620e+03    6.52470e+06    1.61321e+07
+
+           Step           Time
+              1        1.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    1.43584e+03    5.86629e-07    6.99555e+03    1.13446e+06   -7.16740e+03
+   Coul. recip.      Potential Pressure (bar)
+    5.00348e+03    1.14073e+06    2.87192e+06
+
+           Step           Time
+              2        2.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    7.16948e+03    2.30655e-04    6.99505e+03    3.22856e+05   -6.99984e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.94754e+03    3.34968e+05    8.65596e+05
+
+           Step           Time
+              3        3.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    1.92819e+04    4.13130e-02    6.98607e+03    2.04504e+05   -6.90526e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.88873e+03    2.28755e+05    5.57148e+05
+
+           Step           Time
+              4        4.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    1.90442e+04    2.09680e+00    6.92783e+03    1.48450e+05   -7.01655e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.85016e+03    1.72257e+05    3.96460e+05
+
+           Step           Time
+              5        5.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.54941e+04    4.45091e+00    6.85904e+03    1.15512e+05   -7.23878e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.76757e+03    1.45399e+05    3.00961e+05
+
+           Step           Time
+              6        6.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    1.80455e+04    1.46590e+01    6.81365e+03    1.13271e+05   -7.55225e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.70909e+03    1.35302e+05    2.96500e+05
+
+           Step           Time
+              7        7.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    3.09361e+04    1.13530e+01    6.78123e+03    9.57045e+04   -7.64639e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.66171e+03    1.30449e+05    2.42756e+05
+
+           Step           Time
+              8        8.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.01213e+04    3.04556e+01    6.74682e+03    9.58614e+04   -7.96989e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.60361e+03    1.19394e+05    2.48288e+05
+
+           Step           Time
+              9        9.00000
+
+           Step           Time
+             10       10.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.75475e+04    2.63079e+01    6.72399e+03    8.44589e+04   -8.06491e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.56911e+03    1.15261e+05    2.14015e+05
+
+           Step           Time
+             11       11.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.06424e+04    2.60565e+01    6.68273e+03    8.82635e+04   -8.48323e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.49375e+03    1.11625e+05    2.26463e+05
+
+           Step           Time
+             12       12.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    3.16589e+04    2.58163e+01    6.65844e+03    7.56965e+04   -8.58157e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.45739e+03    1.09916e+05    1.87207e+05
+
+           Step           Time
+             13       13.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.02817e+04    3.58014e+01    6.62497e+03    8.56427e+04   -9.04850e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.38113e+03    1.07918e+05    2.18241e+05
+
+           Step           Time
+             14       14.00000
+
+           Step           Time
+             15       15.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.70856e+04    3.56415e+01    6.60956e+03    7.01179e+04   -9.08070e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.36133e+03    9.91293e+04    1.74613e+05
+
+           Step           Time
+             16       16.00000
+
+           Step           Time
+             17       17.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.30372e+04    3.61267e+01    6.58793e+03    7.05211e+04   -9.36208e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.31362e+03    9.51339e+04    1.77728e+05
+
+           Step           Time
+             18       18.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.85793e+04    3.67610e+01    6.53935e+03    6.37348e+04   -9.80609e+03
+   Coul. recip.      Potential Pressure (bar)
+    4.22360e+03    9.33077e+04    1.55959e+05
+
+           Step           Time
+             19       19.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.24265e+04    3.98124e+01    6.51944e+03    6.64922e+04   -1.01592e+04
+   Coul. recip.      Potential Pressure (bar)
+    4.16858e+03    8.94874e+04    1.66417e+05
+
+           Step           Time
+             20       20.00000
+
+           Step           Time
+             21       21.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.60922e+04    4.07269e+01    6.50067e+03    6.12496e+04   -1.02989e+04
+   Coul. recip.      Potential Pressure (bar)
+    4.13794e+03    8.77222e+04    1.50478e+05
+
+           Step           Time
+             22       22.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.22035e+04    4.34541e+01    6.47406e+03    6.45072e+04   -1.07252e+04
+   Coul. recip.      Potential Pressure (bar)
+    4.07028e+03    8.65733e+04    1.60661e+05
+
+           Step           Time
+             23       23.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.76232e+04    4.48257e+01    6.45223e+03    5.77966e+04   -1.08678e+04
+   Coul. recip.      Potential Pressure (bar)
+    4.03815e+03    8.50872e+04    1.39891e+05
+
+           Step           Time
+             24       24.00000
+
+           Step           Time
+             25       25.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.42926e+04    4.65180e+01    6.44172e+03    5.85596e+04   -1.10876e+04
+   Coul. recip.      Potential Pressure (bar)
+    4.00538e+03    8.22582e+04    1.43759e+05
+
+           Step           Time
+             26       26.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.69814e+04    6.73882e+01    6.25312e+03    4.74314e+04   -1.36187e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.60122e+03    7.07157e+04    1.10909e+05
+
+           Step           Time
+             27       27.00000
+
+           Step           Time
+             28       28.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.44359e+04    6.85012e+01    6.24894e+03    4.87968e+04   -1.38401e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.57395e+03    6.92840e+04    1.15880e+05
+
+           Step           Time
+             29       29.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.68352e+04    7.73003e+01    6.19024e+03    4.52946e+04   -1.48059e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.44311e+03    6.70345e+04    1.04618e+05
+
+           Step           Time
+             30       30.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.36956e+04    7.95447e+01    6.18151e+03    4.74529e+04   -1.51150e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.40725e+03    6.57017e+04    1.11951e+05
+
+           Step           Time
+             31       31.00000
+
+           Step           Time
+             32       32.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.56082e+04    8.16197e+01    6.16664e+03    4.49951e+04   -1.52930e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.38313e+03    6.49417e+04    1.04316e+05
+
+           Step           Time
+             33       33.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.34689e+04    8.47549e+01    6.15099e+03    4.69038e+04   -1.57341e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.33212e+03    6.42064e+04    1.10252e+05
+
+           Step           Time
+             34       34.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.63059e+04    8.73970e+01    6.13239e+03    4.35869e+04   -1.59313e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.30588e+03    6.34872e+04    9.98189e+04
+
+           Step           Time
+             35       35.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.31082e+04    8.99561e+01    6.12229e+03    4.68809e+04   -1.63515e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.26070e+03    6.31106e+04    1.09986e+05
+
+           Step           Time
+             36       36.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.72896e+04    9.31634e+01    6.09982e+03    4.23087e+04   -1.65436e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.23491e+03    6.24826e+04    9.55001e+04
+
+           Step           Time
+             37       37.00000
+
+           Step           Time
+             38       38.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.47000e+04    9.42083e+01    6.09724e+03    4.35754e+04   -1.67659e+04
+   Coul. recip.      Potential Pressure (bar)
+    3.21244e+03    6.09134e+04    1.00288e+05
+
+           Step           Time
+             39       39.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.71484e+04    1.17132e+02    5.97600e+03    3.88641e+04   -1.92905e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.94789e+03    5.57630e+04    8.50715e+04
+
+           Step           Time
+             40       40.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.35203e+04    1.17976e+02    5.97619e+03    4.19955e+04   -1.96593e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.91784e+03    5.48685e+04    9.51961e+04
+
+           Step           Time
+             41       41.00000
+
+           Step           Time
+             42       42.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.55917e+04    1.20391e+02    5.96217e+03    3.92221e+04   -1.98098e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.90291e+03    5.39895e+04    8.67068e+04
+
+           Step           Time
+             43       43.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.33313e+04    1.23918e+02    5.94812e+03    4.18371e+04   -2.04224e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.85237e+03    5.36705e+04    9.44693e+04
+
+           Step           Time
+             44       44.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.63432e+04    1.27092e+02    5.93001e+03    3.80772e+04   -2.05927e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.83598e+03    5.27207e+04    8.28496e+04
+
+           Step           Time
+             45       45.00000
+
+           Step           Time
+             46       46.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.44967e+04    1.27993e+02    5.92779e+03    3.93761e+04   -2.08543e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.81605e+03    5.18904e+04    8.72284e+04
+
+           Step           Time
+             47       47.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.67079e+04    1.34321e+02    5.89664e+03    3.71722e+04   -2.15047e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.76337e+03    5.11697e+04    7.98002e+04
+
+           Step           Time
+             48       48.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.40511e+04    1.35085e+02    5.89609e+03    3.92697e+04   -2.18356e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.74017e+03    5.02565e+04    8.67062e+04
+
+           Step           Time
+             49       49.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.73660e+04    1.40460e+02    5.86916e+03    3.63700e+04   -2.22550e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.70742e+03    5.01981e+04    7.69201e+04
+
+           Step           Time
+             50       50.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.35274e+04    1.40782e+02    5.87203e+03    3.97150e+04   -2.26524e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.68160e+03    4.92844e+04    8.77310e+04
+
+           Step           Time
+             51       51.00000
+
+           Step           Time
+             52       52.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.57479e+04    1.43624e+02    5.85718e+03    3.67665e+04   -2.28130e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.66897e+03    4.83712e+04    7.87027e+04
+
+           Step           Time
+             53       53.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.32595e+04    1.46356e+02    5.84822e+03    3.98847e+04   -2.34578e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.62714e+03    4.83081e+04    8.79019e+04
+
+           Step           Time
+             54       54.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.65077e+04    1.50191e+02    5.82853e+03    3.57972e+04   -2.36332e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.61374e+03    4.72641e+04    7.53058e+04
+
+           Step           Time
+             55       55.00000
+
+           Step           Time
+             56       56.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.45055e+04    1.50664e+02    5.82849e+03    3.72462e+04   -2.39194e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.59661e+03    4.64080e+04    8.01686e+04
+
+           Step           Time
+             57       57.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.69276e+04    1.57320e+02    5.79844e+03    3.50294e+04   -2.46027e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.55323e+03    4.58632e+04    7.25812e+04
+
+           Step           Time
+             58       58.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.40428e+04    1.57416e+02    5.80093e+03    3.73394e+04   -2.49633e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.53350e+03    4.49108e+04    8.01767e+04
+
+           Step           Time
+             59       59.00000
+
+           Step           Time
+             60       60.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.57223e+04    1.60382e+02    5.78701e+03    3.53568e+04   -2.51877e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.51971e+03    4.43585e+04    7.39201e+04
+
+           Step           Time
+             61       61.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.38117e+04    1.62316e+02    5.78114e+03    3.73638e+04   -2.57343e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.49022e+03    4.38749e+04    8.00032e+04
+
+           Step           Time
+             62       62.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.62623e+04    1.66135e+02    5.76335e+03    3.46092e+04   -2.59772e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.47591e+03    4.32997e+04    7.12716e+04
+
+           Step           Time
+             63       63.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.34491e+04    1.66950e+02    5.76313e+03    3.77878e+04   -2.65020e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.44982e+03    4.31148e+04    8.09316e+04
+
+           Step           Time
+             64       64.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.70329e+04    1.71890e+02    5.74028e+03    3.38772e+04   -2.67411e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.43609e+03    4.25172e+04    6.85299e+04
+
+           Step           Time
+             65       65.00000
+
+           Step           Time
+             66       66.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.48032e+04    1.71609e+02    5.74332e+03    3.52722e+04   -2.70167e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.42334e+03    4.13970e+04    7.34220e+04
+
+           Step           Time
+             67       67.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.73433e+04    1.85003e+02    5.68969e+03    3.28404e+04   -2.87691e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.34062e+03    3.96298e+04    6.47292e+04
+
+           Step           Time
+             68       68.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.41620e+04    1.84015e+02    5.69629e+03    3.52276e+04   -2.91554e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.32563e+03    3.84401e+04    7.27195e+04
+
+           Step           Time
+             69       69.00000
+
+           Step           Time
+             70       70.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.59918e+04    1.87710e+02    5.68066e+03    3.32234e+04   -2.94532e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.31290e+03    3.79432e+04    6.62824e+04
+
+           Step           Time
+             71       71.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.38818e+04    1.88457e+02    5.67998e+03    3.54208e+04   -2.99854e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.29280e+03    3.74785e+04    7.30109e+04
+
+           Step           Time
+             72       72.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.65471e+04    1.93114e+02    5.66031e+03    3.26047e+04   -3.02870e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.28053e+03    3.69987e+04    6.39624e+04
+
+           Step           Time
+             73       73.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.34733e+04    1.92767e+02    5.66472e+03    3.60199e+04   -3.08433e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.26122e+03    3.67686e+04    7.44009e+04
+
+           Step           Time
+             74       74.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.73661e+04    1.98797e+02    5.63937e+03    3.19722e+04   -3.11276e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.25008e+03    3.62990e+04    6.14365e+04
+
+           Step           Time
+             75       75.00000
+
+           Step           Time
+             76       76.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.49265e+04    1.97763e+02    5.64502e+03    3.34144e+04   -3.14322e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.24026e+03    3.49918e+04    6.65841e+04
+
+           Step           Time
+             77       77.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.75918e+04    2.18135e+02    5.57101e+03    3.07582e+04   -3.46875e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.13921e+03    3.15909e+04    5.66467e+04
+
+           Step           Time
+             78       78.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.41314e+04    2.15868e+02    5.58170e+03    3.33876e+04   -3.51506e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.12835e+03    3.02943e+04    6.54172e+04
+
+           Step           Time
+             79       79.00000
+
+           Step           Time
+             80       80.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.61060e+04    2.20062e+02    5.56545e+03    3.12429e+04   -3.54907e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.11986e+03    2.97636e+04    5.85221e+04
+
+           Step           Time
+             81       81.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.38264e+04    2.19934e+02    5.56807e+03    3.37276e+04   -3.61311e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.10556e+03    2.93165e+04    6.60646e+04
+
+           Step           Time
+             82       82.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.66961e+04    2.25351e+02    5.54712e+03    3.06886e+04   -3.64741e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.09763e+03    2.87807e+04    5.63113e+04
+
+           Step           Time
+             83       83.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.33845e+04    2.23796e+02    5.55563e+03    3.45419e+04   -3.71497e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.08399e+03    2.86402e+04    6.79842e+04
+
+           Step           Time
+             84       84.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.75714e+04    2.31000e+02    5.52792e+03    3.01196e+04   -3.74711e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.07707e+03    2.80559e+04    5.38762e+04
+
+           Step           Time
+             85       85.00000
+
+           Step           Time
+             86       86.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.49299e+04    2.29070e+02    5.53623e+03    3.16829e+04   -3.78443e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.07015e+03    2.66039e+04    5.94469e+04
+
+           Step           Time
+             87       87.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.79517e+04    2.47116e+02    5.47466e+03    2.92235e+04   -4.12198e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.01286e+03    2.36900e+04    4.98346e+04
+
+           Step           Time
+             88       88.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.41879e+04    2.43583e+02    5.48890e+03    3.19382e+04   -4.17749e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.00580e+03    2.20895e+04    5.89989e+04
+
+           Step           Time
+             89       89.00000
+
+           Step           Time
+             90       90.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.63302e+04    2.48492e+02    5.47113e+03    2.97278e+04   -4.22330e+04
+   Coul. recip.      Potential Pressure (bar)
+    2.00010e+03    2.15448e+04    5.17882e+04
+
+           Step           Time
+             91       91.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.38454e+04    2.47220e+02    5.47746e+03    3.23951e+04   -4.29686e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.99171e+03    2.09882e+04    5.99119e+04
+
+           Step           Time
+             92       92.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.69575e+04    2.53579e+02    5.45448e+03    2.92360e+04   -4.34161e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.98690e+03    2.04724e+04    4.96626e+04
+
+           Step           Time
+             93       93.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.33625e+04    2.50642e+02    5.46718e+03    3.33787e+04   -4.42298e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.97880e+03    2.02081e+04    6.22208e+04
+
+           Step           Time
+             94       94.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.78999e+04    2.59173e+02    5.43652e+03    2.87273e+04   -4.46412e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.97508e+03    1.96568e+04    4.72783e+04
+
+           Step           Time
+             95       95.00000
+
+           Step           Time
+             96       96.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.50193e+04    2.56271e+02    5.44746e+03    3.03383e+04   -4.51062e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.97096e+03    1.79260e+04    5.31022e+04
+
+           Step           Time
+             97       97.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.69048e+04    2.71260e+02    5.39866e+03    2.85109e+04   -4.91063e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.94333e+03    1.39227e+04    4.57044e+04
+
+           Step           Time
+             98       98.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.31838e+04    2.67500e+02    5.41379e+03    3.32104e+04   -5.01957e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.93877e+03    1.38186e+04    5.96645e+04
+
+           Step           Time
+             99       99.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.78484e+04    2.76703e+02    5.38171e+03    2.80390e+04   -5.06622e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.93774e+03    1.28214e+04    4.33219e+04
+
+           Step           Time
+            100      100.00000
+
+           Step           Time
+            101      101.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.48863e+04    2.73305e+02    5.39391e+03    2.98065e+04   -5.12984e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.93567e+03    1.09974e+04    4.95502e+04
+
+           Step           Time
+            102      102.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.74613e+04    2.84503e+02    5.35772e+03    2.78732e+04   -5.46223e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.93080e+03    8.28526e+03    4.17989e+04
+
+           Step           Time
+            103      103.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.34809e+04    2.79672e+02    5.37565e+03    3.20314e+04   -5.62538e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.93076e+03    6.84457e+03    5.44810e+04
+
+           Step           Time
+            104      104.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.84747e+04    2.90037e+02    5.34093e+03    2.75412e+04   -5.79451e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.93326e+03    5.63495e+03    3.93665e+04
+
+           Step           Time
+            105      105.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.27721e+04    2.82447e+02    5.36864e+03    3.46556e+04   -7.70993e+04
+   Coul. recip.      Potential Pressure (bar)
+    1.94064e+03   -1.20798e+04    5.71071e+04
+
+           Step           Time
+            106      106.00000
+
+           Step           Time
+            107      107.00000
+
+           Step           Time
+            108      108.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.29685e+04    2.82897e+02    5.36693e+03    3.41112e+04   -1.31118e+05
+   Coul. recip.      Potential Pressure (bar)
+    1.94471e+03   -6.64435e+04    4.46517e+04
+
+           Step           Time
+            109      109.00000
+
+           Step           Time
+            110      110.00000
+
+           Step           Time
+            111      111.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.29731e+04    2.82908e+02    5.36689e+03    3.40068e+04   -3.03757e+05
+   Coul. recip.      Potential Pressure (bar)
+    1.94345e+03   -2.39184e+05    8.88448e+03
+
+           Step           Time
+            112      112.00000
+
+           Step           Time
+            113      113.00000
+
+           Step           Time
+            114      114.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.29732e+04    2.82908e+02    5.36689e+03    3.40313e+04   -3.59274e+05
+   Coul. recip.      Potential Pressure (bar)
+    1.94382e+03   -2.94676e+05    5.33394e+04
+
+           Step           Time
+            115      115.00000
+
+           Step           Time
+            116      116.00000
+
+   Energies (kJ/mol)
+  Harmonic Pot.          Angle  Improper Dih.        LJ (SR)   Coulomb (SR)
+    2.29734e+04    2.82908e+02    5.36689e+03    3.40156e+04   -3.59276e+05
+   Coul. recip.      Potential Pressure (bar)
+    1.94359e+03   -2.94693e+05    3.75894e+04
+
+           Step           Time
+            117      117.00000
+
+           Step           Time
+            118      118.00000
+
+           Step           Time
+            119      119.00000
+
+           Step           Time
+            120      120.00000
+
+           Step           Time
+            121      121.00000
+
+           Step           Time
+            122      122.00000
+
+           Step           Time
+            123      123.00000
+
+           Step           Time
+            124      124.00000
+
+           Step           Time
+            125      125.00000
+
+
+Energy minimization has stopped, but the forces have not converged to the
+requested precision Fmax < 500 (which may not be possible for your system).
+It stopped because the algorithm tried to make a new step whose size was too
+small, or there was no change in the energy since last step. Either way, we
+regard the minimization as converged to within the available machine
+precision, given your starting configuration and EM parameters.
+
+Double precision normally gives you higher accuracy, but this is often not
+needed for preparing to run molecular dynamics.
+You might need to increase your constraint accuracy, or turn
+off constraints altogether (set constraints = none in mdp file)
+
+Steepest Descents converged to machine precision in 126 steps,
+but did not reach the requested Fmax < 500.
+Potential Energy  = -2.9469325e+05
+Maximum force     =  2.9636819e+08 on atom 1809
+Norm of force     =  7.4271123e+06
+Finished mdrun on rank 0 Tue Jan 18 09:02:57 2022
+

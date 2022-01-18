@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
 ;	On host: DESKTOP-G0MSIU7
-;	At date: Sun Jan 16 22:50:42 2022
+;	At date: Tue Jan 18 08:55:29 2022
 ;
 ;	Created by:
 ;	             :-) GROMACS - gmx grompp, 2020.1-Ubuntu-2020.1-1 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr
 ;	Working dir:  /mnt/c/Users/Crimson_King/Desktop/Water/Ferricyanide/Ferri_vacuo/energyMin
 ;	Command line:
-;	  gmx grompp -f energyMin_ferri.mdp -c ferri.gro -p ferricyanide_vacuo.top -o em_ferri.tpr -maxwarn 2
+;	  gmx grompp -f energyMin_ferri.mdp -c ferri.gro -p ferricyanide_vacuo.top -o em_ferri.tpr -maxwarn 1
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.

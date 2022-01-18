@@ -5,7 +5,7 @@
 1                      2                        yes    
 
 #include "../../ff/Ferricyanide_nonbonded.itp"
-#include "../../ff/tf.itp"
+#include "../../ff/Ferricyanide.itp"
 
 [ system ]
 FeC in water
