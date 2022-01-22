@@ -51,7 +51,7 @@ FeC         2
     
 [angles]
 ; ai     aj   ak    funct    simga0(ang)    Kb kJ/(mol rad^2)
-    1    2    3       1         180.0           172.9            ; no conversion, Fe-C-N
+;    1    2    3       1         180.0           172.9            ; no conversion, Fe-C-N
     1    4    5       1         180.0           172.9
     1    6    7       1         180.0           172.9
     1    8    9       1         180.0           172.9
@@ -69,18 +69,40 @@ FeC         2
     8    1   12       1          90.0           818.9
    10    1   12       1          90.0           818.9  
 
-[ dihedrals ]
+
+[ angle_restraints ]
+
+; ai     aj   ak al    function   simga0(ang)    Kb kJ/(mol rad^2) multiplicity
+    1    2    3   2        1         180.0           172.9                1       ;
+
 ;
 ;   ai    aj    ak    al funct  sigma0(ang)  Kd(kJ/(mol*rad^2)   coplanar dihedral == improper
+; this force constant is random, but should be constrained by angle constraints, only prevent flipping?
+; ai aj ak al type phi dphi fc
 
 
+   
+   
+[ dihedral_restraints ]
 
-     6     2    10     12   2       0        354.4   ; C-C-C-C   no conversion
-	 8     4    10      6   2       0        354.4
-     6     4    10      8   2       0        354.4
-	 5     3     9     13   2       0        354.4    ; N-N-N-N
-     7    5     11      9   2       0        354.4
-     7    3     11     13   2       0        354.4
+;
+;   ai    aj    ak    al funct  sigma0(ang)  Kd(kJ/(mol*rad^2)   coplanar dihedral == improper
+; this force constant is random, but should be constrained by angle constraints, only prevent flipping?
+; ai aj ak al type phi dphi fc
+     6     2    10     12   1       0    20    10   ; C-C-C-C   no conversion
+	 8     4    10      6   1      0     20    10
+     6     4    10      8   1       0    20   10
+	 5     3     9     13   1       0    20    10    ; N-N-N-N
+     7    5     11      9   1       0    20    10
+     7    3     11     13   1       0    20    10
+
+;[ dihedrals ]
+;     6     2    10     12   2       0        354.4   ; C-C-C-C   no conversion
+;	 8     4    10      6   2       0        354.4
+;     6     4    10      8   2       0        354.4
+;	 5     3     9     13   2       0        354.4    ; N-N-N-N
+;     7    5     11      9   2       0        354.4
+;     7    3     11     13   2       0        354.4
 
 
 

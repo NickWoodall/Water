@@ -5,10 +5,10 @@
 1                      2                        yes    
 
 #include "../../ff/Ferricyanide_nonbonded.itp"
-#include "../../ff/Ferricyanide.itp"
+#include "../ff_opc/Ferricyanide_Restraint.itp"
 
 [ system ]
-FeC in water
+FeC in vacuo
 
 [ molecules ]
 ;molecule name   nr.
