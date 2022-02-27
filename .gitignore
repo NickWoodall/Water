@@ -129,9 +129,12 @@ dmypy.json
 .pyre/
 
 # md run files
-*.trr
-*.log
-*.edr
-*.cpt
-*.xtc
+*.trr*
+*.log*
+*.edr*
+*.cpt*
+*.xtc*
+*.tpr*
+*.trr*
+
 
