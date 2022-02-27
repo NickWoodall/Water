@@ -1,6 +1,6 @@
 integrator               = md
 dt                       = .002
-nsteps                   = 100000
+nsteps                   = 10000
 
 nstxout                  = 1000
 nstlog                   = 1000
