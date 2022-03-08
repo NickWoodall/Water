@@ -2,16 +2,16 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
 ;	On host: DESKTOP-G0MSIU7
-;	At date: Sun Mar  6 23:06:34 2022
+;	At date: Sun Mar  6 23:23:24 2022
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
 ;	
 ;	Executable:   /usr/local/gromacs/bin/gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /mnt/c/Users/Crimson_King/Desktop/Water/Ferricyanide/Ferricyanide_OPC/equil
+;	Working dir:  /mnt/c/Users/Crimson_King/Desktop/Water/Ferricyanide/Ferricyanide_OPC/mdrun
 ;	Command line:
-;	  gmx grompp -f equilibrate_ferri.mdp -c em_ferri.gro -p ferricyanide_opc_ar.top -o equil.tpr
+;	  gmx grompp -f mdrun_10ns_ferri.mdp -c equil.gro -p ferricyanide_opc_ar.top -o md10ns_Ferri
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -167,7 +167,7 @@ annealing-time           =
 annealing-temp           = 
 
 ; GENERATE VELOCITIES FOR STARTUP RUN
-gen-vel                  = yes
+gen-vel                  = no
 gen-temp                 = 300
 gen-seed                 = -1
 

@@ -4,7 +4,7 @@ gmx grompp -f equilibrate_ferri.mdp -c em_ferri.gro -p ferricyanide_opc_ar.top -
 gmx mdrun -v -deffnm equil
 
 
-trjconv -f equil.xtc -s equil.tpr -pbc mol -ur compact -center
+gmx trjconv -f equil.xtc -s equil.tpr -pbc mol -ur compact -center
 
 #choosing FeC for centering
 #choosing System for output

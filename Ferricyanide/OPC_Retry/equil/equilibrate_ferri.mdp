@@ -1,4 +1,4 @@
-integrator               = sd
+integrator               = md
 dt                       = .002
 nsteps                   = 500000
 
@@ -23,7 +23,7 @@ rvdw                     = 0.8
 DispCorr                 = EnerPres
 
 tc-grps                  = System
-tau-t                    = 0.5
+tau-t                    = 2
 ref-t                    = 300
 
 pcoupl                   = Berendsen
@@ -31,4 +31,7 @@ tau-p                    = 1.0
 compressibility          = 4.5e-5
 ref-p                    = 1.0
 
+; GENERATE VELOCITIES FOR STARTUP RUN
 gen-vel                  = yes
+gen-temp                 = 300
+gen-seed                 = -1

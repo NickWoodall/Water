@@ -2,14 +2,14 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
 ;	On host: DESKTOP-G0MSIU7
-;	At date: Sun Mar  6 23:06:34 2022
+;	At date: Sun Mar  6 17:00:35 2022
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
 ;	
 ;	Executable:   /usr/local/gromacs/bin/gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /mnt/c/Users/Crimson_King/Desktop/Water/Ferricyanide/Ferricyanide_OPC/equil
+;	Working dir:  /mnt/c/Users/Crimson_King/Desktop/Water/Ferricyanide/OPC_Retry/equil
 ;	Command line:
 ;	  gmx grompp -f equilibrate_ferri.mdp -c em_ferri.gro -p ferricyanide_opc_ar.top -o equil.tpr
 
@@ -21,7 +21,7 @@ include                  =
 define                   = 
 
 ; RUN CONTROL PARAMETERS
-integrator               = sd
+integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = .002
@@ -138,7 +138,7 @@ print-nose-hoover-chain-variables = no
 ; Groups to couple separately
 tc-grps                  = System
 ; Time constant (ps) and reference temperature (K)
-tau-t                    = 0.5
+tau-t                    = 2
 ref-t                    = 300
 ; pressure coupling     
 pcoupl                   = Berendsen
