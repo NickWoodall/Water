@@ -1,0 +1,15 @@
+#define _test
+[ defaults ]
+; 1=Lennard Jones  (sigma eps combo rule)     generate Lennard Jones pairs automatically
+; nbfunc            comb-rule                gen-pairs   
+1                      2                        yes    
+
+#include "../ff/Ferricyanide_4pflex_nonbonded.itp"
+#include "../ff/tip4p_flex.itp"
+
+[ system ]
+FeC in water
+
+[ molecules ]
+;molecule name   nr.
+SOL         805

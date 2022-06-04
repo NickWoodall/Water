@@ -11,7 +11,7 @@ gmx trjconv -f md10ns_Ferri.xtc -s md100ns_Ferri.tpr -pbc mol -ur compact -cente
 
 
 
-#auto correlation function
+#auto correlation 
 
 #add certain atomts to index file
 
@@ -22,14 +22,6 @@ a OW1
 a FeC
 
 gmx rdf -n index.ndx -o RDF_OW_FeC -f md10ns_Ferri.xtc -s md10ns_Ferri.tpr 
+choose 11/12 for FeC Oxy
 
-#choose 11/12 to get Fe - O atom pair
-
-#I downloaded grace which can do the .xvg file conversion to .ps
-#.xvg is some sort of comma delimited file with liek ~26 lines of comments at the beginning. I tried in excel but something wasn't right, but theoretically
-#can do [sudo apt-get install grace] 
-
-#makes a .ps (post-script file) pain to view
-gracebat RDF_OW_FeC
-
-which is vieweable
+gracebat [.xvg file]
